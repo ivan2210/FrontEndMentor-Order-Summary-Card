@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+    --fs-big: 1.75rem;
+    --fs-base: 1rem;
+    --fs-small: 0.875rem;
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-500);
+    line-height: 1.5;
+    color: var(--Desaturated-blue);
+    background-color: var(--Pale-blue);
+    text-align: center;
+}
+
+h2{
+    font-size: var(--fs-big);
+    font-weight: var(--fw-900);
+    color: var(--Dark-blue);
+}
+
+h3{
+    font-weight: var(--fw-900);
+    color: var(--Desaturated-blue)
+}
+
+button{
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-weight: var(--fw-900);
+    border: none;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    border-radius: 1rem;
+    background-color: var(--Very-pale-blue);
+    max-width: 450px;
+    overflow: hidden;
+}
+
+.card-content{
+    padding: 3rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card-content > p{
+    font-weight: var(--fw-500);
+}
+
+.card-plan{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: left;
+    background-color: hsl(228, 42%, 95%);
+    margin: 10px 0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.card-plan > a{
+    margin-left: auto;
+}
+
+.card-plan > a:hover{
+    text-decoration: none;
+    font-weight: var(--fw-900);
+}
+
+.button-primary{
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+}
+
+.button-primary:hover,
+.button-primary:focus{
+    background-color: hsl(245, 85%, 63%);
+    box-shadow: 0 10px 5px hsl(228, 42%, 95%);
+}
+
+.button-secondary{
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+    font-weight: var(--fw-900);
+}
+
+.button-secondary:hover,
+.button-secondary:focus{
+    color: var(--Dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
